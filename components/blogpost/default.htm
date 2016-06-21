@@ -23,6 +23,12 @@
     {% else %}
         {{ '' | generateCanonicalUrl}}
     {% endif %}
+    
+    {% if post.featured_images.count %}
+        {% for image in post.featured_images %}
+            <meta property="og:image" content="{{ image.path | app }}" />
+        {% endfor %}
+    {% endif %}
 
         <meta name="robots" content="{{post.robot_index}},{{post.robot_follow}}">
 
