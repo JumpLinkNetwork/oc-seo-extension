@@ -1,4 +1,4 @@
-<?php namespace AnandPatel\SeoExtension\Components;
+<?php namespace JumpLink\SeoExtension\Components;
 
 use Cms\Classes\ComponentBase;
 use Event;
@@ -18,8 +18,8 @@ class BlogPost extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'anandpatel.seoextension::lang.component.blog.name',
-            'description' => 'anandpatel.seoextension::lang.component.blog.description'
+            'name'        => 'jumplink.seoextension::lang.component.blog.name',
+            'description' => 'jumplink.seoextension::lang.component.blog.description'
         ];
     }
 

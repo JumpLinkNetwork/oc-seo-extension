@@ -1,9 +1,9 @@
-<?php namespace AnandPatel\SeoExtension\Components;
+<?php namespace JumpLink\SeoExtension\Components;
 
 use Cms\Classes\ComponentBase;
 use RainLab\Pages\Classes\Router;
 use Cms\Classes\Theme;
-use AnandPatel\SeoExtension\models\Settings;
+use JumpLink\SeoExtension\models\Settings;
 use Request;
 
 class StaticPage extends ComponentBase
@@ -30,8 +30,8 @@ class StaticPage extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'anandpatel.seoextension::lang.component.static.name',
-            'description' => 'anandpatel.seoextension::lang.component.static.description'
+            'name'        => 'jumplink.seoextension::lang.component.static.name',
+            'description' => 'jumplink.seoextension::lang.component.static.description'
         ];
     }
 

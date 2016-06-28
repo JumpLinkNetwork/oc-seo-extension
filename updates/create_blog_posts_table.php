@@ -1,4 +1,4 @@
-<?php namespace AnandPatel\SeoExtension\Updates;
+<?php namespace JumpLink\SeoExtension\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;

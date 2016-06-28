@@ -1,11 +1,11 @@
-<?php namespace AnandPatel\SeoExtension;
+<?php namespace JumpLink\SeoExtension;
 
 use System\Classes\PluginBase;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
 use System\Classes\PluginManager;
 use System\Classes\SettingsManager;
-use AnandPatel\SeoExtension\classes\Helper;
+use JumpLink\SeoExtension\classes\Helper;
 
 /**
  * SeoExtension Plugin Information File
@@ -21,9 +21,9 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'anandpatel.seoextension::lang.plugin.name',
-            'description' => 'anandpatel.seoextension::lang.plugin.description',
-            'author'      => 'AnandPatel',
+            'name'        => 'jumplink.seoextension::lang.plugin.name',
+            'description' => 'jumplink.seoextension::lang.plugin.description',
+            'author'      => 'JumpLink',
             'icon'        => 'icon-search'
         ];
     }
@@ -32,9 +32,9 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'AnandPatel\SeoExtension\Components\BlogPost' => 'SeoBlogPost',
-            'AnandPatel\SeoExtension\Components\StaticPage' => 'SeoStaticPage',
-            'AnandPatel\SeoExtension\Components\CmsPage' => 'SeoCmsPage',
+            'JumpLink\SeoExtension\Components\BlogPost' => 'SeoBlogPost',
+            'JumpLink\SeoExtension\Components\StaticPage' => 'SeoStaticPage',
+            'JumpLink\SeoExtension\Components\CmsPage' => 'SeoCmsPage',
         ];
     }
 
@@ -42,11 +42,11 @@ class Plugin extends PluginBase
     {
         return [
             'settings' => [
-                'label'       => 'anandpatel.seoextension::lang.settings.label',
-                'description' => 'anandpatel.seoextension::lang.settings.description',
+                'label'       => 'jumplink.seoextension::lang.settings.label',
+                'description' => 'jumplink.seoextension::lang.settings.description',
                 'icon'        => 'icon-search',
                 'category'    =>  SettingsManager::CATEGORY_CMS,
-                'class'       => 'AnandPatel\SeoExtension\Models\Settings',
+                'class'       => 'JumpLink\SeoExtension\Models\Settings',
                 'order'       => 100
             ]
         ];

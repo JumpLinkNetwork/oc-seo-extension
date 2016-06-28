@@ -1,6 +1,6 @@
-<?php namespace AnandPatel\SeoExtension\classes;
+<?php namespace JumpLink\SeoExtension\classes;
 
-use AnandPatel\SeoExtension\Models\Settings;
+use JumpLink\SeoExtension\Models\Settings;
 use Request;
 class Helper {
 
