@@ -4,6 +4,7 @@ use Cms\Classes\ComponentBase;
 use RainLab\Pages\Classes\Router;
 use Cms\Classes\Theme;
 use JumpLink\SeoExtension\models\Settings;
+use JumpLink\SeoExtension\classes\Helper;
 use Request;
 
 class StaticPage extends ComponentBase
@@ -25,6 +26,8 @@ class StaticPage extends ComponentBase
     public $ogFbAppId;
     public $ogLocale;
     public $ogImage;
+
+    public $is_https;
 
 
     public function componentDetails()
@@ -50,6 +53,9 @@ class StaticPage extends ComponentBase
         $this->page = $this->page['page'] = $router->findByUrl($url);
 
         if ($this->page) {
+
+        $this->is_https = $this->page['is_https'] = Helper::isSSL();
+
             $this->seo_title = $this->page['seo_title'] = $this->page->getViewBag()->property('seo_title');
             $this->title = $this->page['title'] = $this->page->getViewBag()->property('title');
             $this->seo_description = $this->page['seo_description'] = $this->page->getViewBag()->property('seo_description');
@@ -68,6 +74,7 @@ class StaticPage extends ComponentBase
                 $this->ogUrl = empty($this->page->canonical_url) ? Request::url() : $this->page->canonical_url ;
                 $this->ogSiteName = $settings->og_sitename;
                 $this->ogFbAppId = $settings->og_fb_appid;
+                $this->ogImage = $this->page['og_image'] = $this->page->getViewBag()->property('og_image');
             }
         }
 

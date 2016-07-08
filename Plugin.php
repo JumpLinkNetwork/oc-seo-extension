@@ -151,6 +151,12 @@ class Plugin extends PluginBase
                             'default' => 'follow',
                             'span'    => 'right'
                         ],
+                        'viewBag[og_image]' => [
+                            'label'   => 'Open Graph Image',
+                            'type'    => 'mediafinder',
+                            'tab'     => 'cms::lang.editor.meta',
+                            'default' => ''
+                        ],
                 ],
                 'primary');
             }

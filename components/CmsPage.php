@@ -5,6 +5,7 @@ use Cms\Classes\Page;
 use Cms\Classes\Theme;
 use Request;
 use JumpLink\SeoExtension\models\Settings;
+use JumpLink\SeoExtension\classes\Helper;
 use URL;
 
 class CmsPage extends ComponentBase
@@ -27,6 +28,8 @@ class CmsPage extends ComponentBase
     public $ogLocale;
     public $ogImage;
 
+    public $is_https;
+
 
     public function componentDetails()
     {
@@ -46,6 +49,8 @@ class CmsPage extends ComponentBase
         $theme = Theme::getActiveTheme();
         $page = Page::load($theme,$this->page->baseFileName);
         $this->page["hasBlog"] = false;
+
+        $this->is_https = $this->page['is_https'] = Helper::isSSL();
 
         if(!$page->hasComponent("blogPost"))
         {

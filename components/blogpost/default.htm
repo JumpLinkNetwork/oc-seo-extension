@@ -26,6 +26,9 @@
     
     {% if post.featured_images.count %}
         {% for image in post.featured_images %}
+            {% if is_https == true %}
+            <meta property="og:image:secure_url" content="{{ image.path | app }}" />
+            {% endif %}
             <meta property="og:image" content="{{ image.path | app }}" />
         {% endfor %}
     {% endif %}
