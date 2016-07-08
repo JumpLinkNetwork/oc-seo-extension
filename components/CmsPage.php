@@ -71,6 +71,10 @@ class CmsPage extends ComponentBase
                 $this->ogUrl = empty($this->page->canonical_url) ? Request::url() : $this->page->canonical_url ;
                 $this->ogSiteName = $settings->og_sitename;
                 $this->ogFbAppId = $settings->og_fb_appid;
+                $this->ogImage = $this->page['og_image'] = $this->page->og_image;
+                // if no image is specified for the page, use the global default
+                if (empty($this->ogImage))
+                    $this->ogImage = $this->page['og_image'] = $settings->og_image;
             }
 
         }

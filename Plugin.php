@@ -258,6 +258,12 @@ class Plugin extends PluginBase
                         'default' => 'follow',
                         'span'    => 'right'
                     ],
+                    'settings[og_image]' => [
+                        'label'   => 'OpenGraph Image (overrides the global default which can be set in Backend->Settings->SEO)',
+                        'type'    => 'mediafinder',
+                        'tab'     => 'cms::lang.editor.meta',
+                        'default' => ''
+                    ],
                 ],
                 'primary'
             );

@@ -68,7 +68,12 @@ tabs:
       span: left
       tab: jumplink.seoextension::lang.settings.tab_og.label
 
-
+    og_image:
+      label: jumplink.seoextension::lang.settings.tab_og.image
+      comment: jumplink.seoextension::lang.settings.tab_og.image_comment
+      type: mediafinder
+      mode: image
+      tab: jumplink.seoextension::lang.settings.tab_og.label
 
 
 

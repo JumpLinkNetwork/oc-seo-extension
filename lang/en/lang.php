@@ -33,7 +33,9 @@ return [
             'sitename' => 'Site name for Open Graph',
             'sitename_comment' => 'The name of your website. Not the URL, but the name. (i.e. "SEO Extension" not "seoextension.com".)',
             'fb' => 'Facebook App Id',
-            'fb_comment' => 'The unique ID that lets Facebook know the identity of your site.'
+            'fb_comment' => 'The unique ID that lets Facebook know the identity of your site.',
+            'image' => 'OpenGraph image',
+            'image_comment' => 'Gloabl (fallback) OpenGraph image, can be overridden individually in CMS pages, blog posts (featured image) and static pages'
         ],
     ],
     'component' => [
