@@ -27,12 +27,12 @@
         {{ '' | generateCanonicalUrl}}
     {% endif %}
 
-    
+
     {% if __SELF__.ogImage %}
         {% if page['is_https'] == true %}
-        <meta property="og:image:secure_url" content="{{ __SELF__.ogImage | app }}" />
+        <meta property="og:image:secure_url" content="{{ __SELF__.ogImage | media }}" />
         {% endif %}
-        <meta property="og:image" content="{{ __SELF__.ogImage | app }}" />
+        <meta property="og:image" content="{{ __SELF__.ogImage | media }}" />
     {% endif %}
 
     <meta name="robots" content="{{__SELF__.robot_index}},{{__SELF__.robot_follow}}">
