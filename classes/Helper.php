@@ -92,11 +92,17 @@ class Helper {
 
     public static function isSSL()
     {
-        if( (!empty( $_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ) || $_SERVER['SERVER_PORT']==443)
+        if( !empty( $_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ) { 
             return true;
+	}
 
-        if( !empty( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' )
+        if( $_SERVER['SERVER_PORT'] == 443 ) {
             return true;
+        }
+
+        if( !empty( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
+            return true;
+        }
 
         return false;
     }

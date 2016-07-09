@@ -29,7 +29,7 @@
             {% if is_https == true %}
             <meta property="og:image:secure_url" content="{{ image.path | app }}" />
             {% endif %}
-            <meta property="og:image" content="{{ image.path | app }}" />
+            <meta property="og:image" content="{{ image.path | app | replace({'https': 'http'}) }}" />
         {% endfor %}
     {% endif %}
 
