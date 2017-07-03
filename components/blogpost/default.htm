@@ -37,5 +37,7 @@
 
     {{ ''|otherMetaTags|raw }}
 
-    {{ post|generateOgTags }}
+    {% if post %}
+      {{ post|generateOgTags }}
+    {% endif %}
 {% endput %}
